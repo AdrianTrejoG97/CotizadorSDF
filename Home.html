@@ -1,0 +1,91 @@
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+   <script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <script type="text/javascript">
+            $(function () {
+                $('#fechna').datetimepicker({
+                    format: 'LT'
+                });
+               
+    </script>
+<head>
+	<header> <img src="paisaje1.png" alt="Imagen header" width="100%"> 
+	</header>
+	<style type="text/css">
+		div #cuerpillo {
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var keyt = window.Event ? true : false;
+			function aceptNum(evt){
+			var key = keyt ? evt.which : evt.keyCode;
+			return (key <= 13 || (key>= 48 && key <= 57));
+		}
+	</script>
+	<div class="panel-group">
+	<div class="panel panel-default">
+	<div class="panel-body" id="cuerpillo">
+		<h2><b>FINANCIAMIENTO RESIDENCIAL | </b>  Simulador de credito </h2>
+	</div></div>
+	<div class="panel panel-default">
+  	<div class="panel-body" id="cuerpillo">
+	  <form class="form-horizontal" action="/action_page.php">
+		  	<div class="form-group">
+		  	<label class="control-label col-sm-2" for="nomco">Nombre Completo:</label>
+		      <div class="col-sm-9">          
+		        <input type="text" class="form-control" id="nomco" name="nomco" onkeypress="validaLetras();">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		  	<label class="control-label col-sm-2" for="tel">Telefono:</label>
+		      <div class="col-sm-3">          
+		        <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+		      </div>
+		      <label class="control-label col-sm-2" for="correo">Email:</label>
+		      <div class="col-sm-4">          
+		        <input type="text" class="form-control" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		  	<label class="control-label col-sm-2" for="fechna">Fecha de Nacimiento:</label>
+		      <div class="col-sm-3">          
+		        <div class='input-group date' id='fechna'>
+                    <input type='date' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+		      </div>
+		      <label class="control-label col-sm-2" for="sel1">Estado:</label>
+		      <div class="col-sm-4">          
+		        <select class="form-control" id="sel1">
+		        	<option value="0" >Selecciona Estado</option>
+				    <option value="Aguascalientes"> Aguascalientes </option>
+				    <option> Baja California </option>
+				    <option> Baja California Sur </option>
+				    <option> Campeche </option>
+				    <option> ETC </option>
+				 </select>
+		      </div>
+		    </div>
+			<div class="form-group">        
+		      <div class="col-sm-offset-2 col-sm-10">
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </div>
+		    </div>
+		</form>
+	</div>
+	</div>
+	</div>	
+</body>
+</html>
