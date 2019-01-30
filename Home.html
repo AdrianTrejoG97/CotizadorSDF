@@ -5,11 +5,18 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 <head>
-	<header> <img src="paisaje1.png" alt="Imagen header" width="100%" height="50%"> 
+	<header> <img src="http://s3-ap-south-1.amazonaws.com/startupuploads/wp-content/uploads/2017/03/07211425/mountains_ridge-1920x540.jpeg" alt="Imagen header" width="100%" height="50%"> 
 	</header>
+	<style type="text/css">
+		div #cuerpillo {
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+	</style>
 </head>
-<body>
+<body style="font-size:1vw; color: #575757; font-family: 'Montserrat', sans-serif;">
 	<script>
 		var keyt = window.Event ? true : false;
 			function aceptNum(evt){
@@ -18,92 +25,146 @@
 		}
 	</script>
 	<div class="panel-group">
-			<div class="col-sm-offset-1 panel panel-default col-sm-10">
+			<div class="panel panel-default col-sm-12 container-fluid" style="border-color: white; text-align: center;">
 				<div class="panel-body" id="cuerpillo">
-					<h2><b>FINANCIAMIENTO RESIDENCIAL | </b>  Simulador de credito </h2>
+					<h2 style="font-size:2.5vw;"><b>Financiamiento Residencial | </b>  Simulador de credito </h2>
 				</div>
 			</div>
-			<div class="col-sm-offset-1 panel panel-default col-sm-10">
+			<div class="col-sm-offset-1 panel panel-default col-sm-10" 
+				style="border-radius: 10px 10px 10px 10px;
+						-moz-border-radius: 10px 10px 10px 10px;
+						-webkit-border-radius: 10px 10px 10px 10px;
+						border-width: .5vw;
+						border: solid #BFBFBF;">
 				  	<div class="panel-body" id="cuerpillo">
-					  <form class="form-horizontal" action="/action_page.php">
-						  	<div class="form-group">
-						  	<label class="control-label col-sm-2" for="nomco">Nombre Completo:</label>
-						      <div class="col-sm-10">          
-						        <input type="text" class="form-control" id="nomco" name="nomco" onkeypress="validaLetras();">
-						      </div>
-						    </div>
+				  		<div class="form form-group" style="border: solid #BFBFBF; background-color: #FFFFFF; border-width: .5vw
+				  			border-radius: 10px 10px 10px 10px;
+							-moz-border-radius: 10px 10px 10px 10px;
+							-webkit-border-radius: 10px 10px 10px 10px;
+							padding: 1vw 1vw 1vw 1vw;">	
+						  	<form class="form-horizontal" action="/action_page.php">
+							  	<div class="form-group">
+							  	<label class="control-label col-sm-2" for="nomco">Nombre Completo:</label>
+							      <div class="col-sm-10">          
+							        <input type="text" class="form-control" id="nomco" name="nomco" onkeypress="validaLetras();">
+							      </div>
+							    </div>
+							    <div class="form-group">
+							  	<label class="control-label col-sm-2" for="tel">Telefono:</label>
+							      <div class="col-sm-4">          
+							        <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+							      </div>
+							      <label class="control-label col-sm-2" for="correo">Email:</label>
+							      <div class="col-sm-4">        
+							        <input type="text" class="form-control" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+							      </div>
+							    </div>
+							    <div class="form-group">
+							  	<label class="control-label col-sm-2" for="fechna">Fecha de Nacimiento:</label>
+							      <div class="col-sm-4">          
+					                    <input type='date' class="form-control" style="text-align: center;">
+							      </div>
+							      <label class="control-label col-sm-2" for="sel1">Estado:</label>
+							      <div class="col-sm-4">          
+							        <select class="form-control" id="sel1">
+							        	<option value="0" hidden="true">Selecciona Estado</option>
+									    		<option value="Aguascalientes"> Aguascalientes </option>
+											    <option value="Baja California"> Baja California </option>
+											    <option value="Baja California Sur"> Baja California Sur </option>
+											    <option value="Campeche"> Campeche </option>
+											    <option value="Coahuila"> Coahuila </option>
+											    <option value="Colima"> Colima </option>
+											    <option value="Chiapas"> Chiapas </option>
+											    <option value="Chihuahua"> Chihuahua </option>
+											    <option value="Ciudad de México"> Ciudad de México </option>
+											    <option value="Durango"> Durango </option>
+											    <option value="Guanajuato"> Guanajuato </option>
+											    <option value="Guerrero"> Guerrero </option>
+											    <option value="Hidalgo"> Hidalgo </option>
+											    <option value="Jalisco"> Jalisco </option>
+											    <option value="México"> México </option>
+											    <option value="Michoacán"> Michoacán </option>
+											    <option value="Morelos"> Morelos </option>
+											    <option value="Nayarit"> Nayarit </option>
+											    <option value="Nuevo León"> Nuevo León </option>
+											    <option value="Oaxaca"> Oaxaca </option>
+											    <option value="Puebla"> Puebla </option>
+											    <option value="Querétaro"> Querétaro </option>
+											    <option value="Quintana Roo"> Quintana Roo </option>
+											    <option value="San Luis Potosí"> San Luis Potosí </option>
+											    <option value="Sinaloa"> Sinaloa </option>
+											    <option value="Sonora"> Sonora </option>
+											    <option value="Tabasco"> Tabasco </option>
+											    <option value="Tamaulipas"> Tamaulipas </option>
+											    <option value="Tlaxcala"> Tlaxcala </option>
+											    <option value="Veracruz"> Veracruz </option>
+											    <option value="Yucatán"> Yucatán </option>
+											    <option value="Zacatecas"> Zacatecas </option>
+									 </select>
+							      </div>
+							    </div>
+							</form>
+						</div>
+						    <!-- 2DA PARTE DEL FORMULARIO -->
+								<form class="form-horizontal" action="/action_page.php"></form>
+
+						    <!-- 3ERA PARTE DEL FORMULARIO-->
+						    <hr style="border: solid 1px #BFBFBF;">
+						    <form class="form-horizontal" action="/action_page.php">
 						    <div class="form-group">
-						  	<label class="control-label col-sm-2" for="tel">Telefono:</label>
-						      <div class="col-sm-4">          
+							    <label class="control-label col-sm-offset-2 col-sm-2" for="sel1" style="font-size:1.5vw;">Recursos</label>
+								<label class="control-label col-sm-offset-2 col-sm-5 " for="sel1" style="font-size:1.5vw;">Gastos de Originaci&oacuten</label>
+							</div>
+							<div class="form-group">
+						  	<label class="control-label col-sm-3" for="tel">Credito maximo posible:</label>
+						      <div class="col-sm-3">          
 						        <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
 						      </div>
-						      <label class="control-label col-sm-2" for="correo">Email:</label>
-						      <div class="col-sm-4">          
+						      <label class="control-label col-sm-3" for="correo">Gastos Generales varios:</label>
+						      <div class="col-sm-3">        
 						        <input type="text" class="form-control" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 						      </div>
 						    </div>
 						    <div class="form-group">
-						  	<label class="control-label col-sm-2" for="fechna">Fecha de Nacimiento:</label>
-						      <div class="col-sm-4">          
-						        <div class='input-group date' id='fechna'>
-				                    <input type='date' class="form-control" />
-				                    <span class="input-group-addon">
-				                        <span class="glyphicon glyphicon-calendar"></span>
-				                    </span>
-				                </div>
-						      </div>
-						      <label class="control-label col-sm-2" for="sel1">Estado:</label>
-						      <div class="col-sm-4">          
-						        <select class="form-control" id="sel1">
-						        	<option value="0" hidden="true">Selecciona Estado</option>
-								    		<option value="Aguascalientes"> Aguascalientes </option>
-										    <option value="Baja California"> Baja California </option>
-										    <option value="Baja California Sur"> Baja California Sur </option>
-										    <option value="Campeche"> Campeche </option>
-										    <option value="Coahuila"> Coahuila </option>
-										    <option value="Colima"> Colima </option>
-										    <option value="Chiapas"> Chiapas </option>
-										    <option value="Chihuahua"> Chihuahua </option>
-										    <option value="Ciudad de México"> Ciudad de México </option>
-										    <option value="Durango"> Durango </option>
-										    <option value="Guanajuato"> Guanajuato </option>
-										    <option value="Guerrero"> Guerrero </option>
-										    <option value="Hidalgo"> Hidalgo </option>
-										    <option value="Jalisco"> Jalisco </option>
-										    <option value="México"> México </option>
-										    <option value="Michoacán"> Michoacán </option>
-										    <option value="Morelos"> Morelos </option>
-										    <option value="Nayarit"> Nayarit </option>
-										    <option value="Nuevo León"> Nuevo León </option>
-										    <option value="Oaxaca"> Oaxaca </option>
-										    <option value="Puebla"> Puebla </option>
-										    <option value="Querétaro"> Querétaro </option>
-										    <option value="Quintana Roo"> Quintana Roo </option>
-										    <option value="San Luis Potosí"> San Luis Potosí </option>
-										    <option value="Sinaloa"> Sinaloa </option>
-										    <option value="Sonora"> Sonora </option>
-										    <option value="Tabasco"> Tabasco </option>
-										    <option value="Tamaulipas"> Tamaulipas </option>
-										    <option value="Tlaxcala"> Tlaxcala </option>
-										    <option value="Veracruz"> Veracruz </option>
-										    <option value="Yucatán"> Yucatán </option>
-										    <option value="Zacatecas"> Zacatecas </option>
-								 </select>
+						    	<label class="control-label col-sm-3" for="correo">Credito Solicitado:</label>
+						      <div class="col-sm-3">        
+						        <input type="text" class="form-control" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 						      </div>
 						    </div>
-						    <!-- 2DA PARTE DEL FORMULARIO -->
-						    <hr style="border: 5px; border-color: black;">
-						    
-						    <!-- 3ERA PARTE DEL FORMULARIO-->
-						    <hr style="border: 5px; border-color: black;">
-							<div class="form-group">        
-						      <div class="col-sm-offset-2 col-sm-10">
-						        <button type="submit" class="btn btn-default">Calcular</button>
+						    <div class="form-group col-sm-6" style="border: solid #FFFFFF; background-color: #BFBFBF; padding: 2vw 1vw 1vw 1vw; float: right;">
+							    <div class="form-group">
+							    	<label class="control-label col-sm-5" for="correo">Inversi&oacuten cliente*:</label>
+							      	<div class="col-sm-6">        
+							       <input type="text" class="form-control" disabled="true" value="Enganche inicial" style="text-align: center;">
+							    	</div>
+							    </div>
+							    <div class="form-group">
+							        <label class="control-label col-sm-5" for="correo">Mensualidad*:</label>
+							      	<div class="col-sm-6">        
+							        <input type="text" class="form-control" disabled="true" value="Pago mensual" style="text-align: center;">
+							      </div>
+						    	</div>
+							</div>
+							<div class="col-sm-offset-1 col-sm-10" style="margin-top:-10%;">
+						        <button type="submit" class="btn btn-default" style="background-color: #47A875; padding: 1vw 5vw 1vw 5vw; font-size:2.5vw; color: #FFFFFF;
+						        border-radius: 10px 10px 10px 10px;
+								-moz-border-radius: 10px 10px 10px 10px;
+								-webkit-border-radius: 10px 10px 10px 10px;">Calcular</button>
 						      </div>
-						    </div>
 						</form>
+						<div class="form-group">     
+						      
+						    </div>
 					</div>
+
 			</div>
-	</div>	
+			<div class="col-sm-offset-1 panel panel-default col-sm-10 container-fluid" style="border-color: white; text-align: center;">
+				<br>
+				<p><a href="">Al ingresar los datos aqui expresados acepta los terminos y condiciones de las leyes de privacidad vigentes</a></p>
+				<p> Todas las cantidades aqui expresadas son de caracter ilustrativo y no comprometen en absoluto</p>
+				<p> ningun tipo de cotizaci&oacuten, convenio u otro tipo de trato comercial</p>
+			</div>
+	</div>
+
 </body>
 </html>
