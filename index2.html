@@ -1,0 +1,153 @@
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+	<header> <img src="paisaje1.png" alt="Imagen header" width="100%" height="50%"> 
+	</header>
+</head>
+<body>
+	<script>
+		var keyt = window.Event ? true : false;
+			function aceptNum(evt){
+			var key = keyt ? evt.which : evt.keyCode;
+			return (key <= 13 || (key>= 48 && key <= 57));
+		}
+    
+      function aceptNumDec(evt){
+        var key = keyt ? evt.which : evt.keyCode;
+			return (key <= 13 || (key>= 48 && key <= 57)|| key ==46);
+		} 
+	</script>
+	<div class="panel-group">
+			<div class="col-sm-offset-1 panel panel-default col-sm-10">
+				<div class="panel-body" id="cuerpillo">
+					<h2><b>FINANCIAMIENTO RESIDENCIAL | </b>  Simulador de credito </h2>
+				</div>
+			</div>
+			<div class="col-sm-offset-1 panel panel-default col-sm-10">
+				  	<div class="panel-body" id="cuerpillo">
+					  <form class="form-horizontal" action="/action_page.php">
+						  	<div class="form-group">
+						  	<label class="control-label col-sm-2" for="nomco">Nombre Completo:</label>
+						      <div class="col-sm-10">          
+						        <input type="text" class="form-control" id="nomco" name="nomco" onkeypress="validaLetras();">
+						      </div>
+						    </div>
+						    <div class="form-group">
+						  	<label class="control-label col-sm-2" for="tel">Telefono:</label>
+						      <div class="col-sm-4">          
+						        <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+						      </div>
+						      <label class="control-label col-sm-2" for="correo">Email:</label>
+						      <div class="col-sm-4">          
+						        <input type="text" class="form-control" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+						      </div>
+						    </div>
+						    <div class="form-group">
+						  	<label class="control-label col-sm-2" for="fechna">Fecha de Nacimiento:</label>
+						      <div class="col-sm-4">          
+						        <div class='input-group date' id='fechna'>
+				                    <input type='date' class="form-control" />
+				                    <span class="input-group-addon">
+				                        <span class="glyphicon glyphicon-calendar"></span>
+				                    </span>
+				                </div>
+						      </div>
+						      <label class="control-label col-sm-2" for="sel1">Estado:</label>
+						      <div class="col-sm-4">          
+						        <select class="form-control" id="sel1">
+						        	<option value="0" hidden="true">Selecciona Estado</option>
+								    		<option value="Aguascalientes"> Aguascalientes </option>
+										    <option value="Baja California"> Baja California </option>
+										    <option value="Baja California Sur"> Baja California Sur </option>
+										    <option value="Campeche"> Campeche </option>
+										    <option value="Coahuila"> Coahuila </option>
+										    <option value="Colima"> Colima </option>
+										    <option value="Chiapas"> Chiapas </option>
+										    <option value="Chihuahua"> Chihuahua </option>
+										    <option value="Ciudad de México"> Ciudad de México </option>
+										    <option value="Durango"> Durango </option>
+										    <option value="Guanajuato"> Guanajuato </option>
+										    <option value="Guerrero"> Guerrero </option>
+										    <option value="Hidalgo"> Hidalgo </option>
+										    <option value="Jalisco"> Jalisco </option>
+										    <option value="México"> México </option>
+										    <option value="Michoacán"> Michoacán </option>
+										    <option value="Morelos"> Morelos </option>
+										    <option value="Nayarit"> Nayarit </option>
+										    <option value="Nuevo León"> Nuevo León </option>
+										    <option value="Oaxaca"> Oaxaca </option>
+										    <option value="Puebla"> Puebla </option>
+										    <option value="Querétaro"> Querétaro </option>
+										    <option value="Quintana Roo"> Quintana Roo </option>
+										    <option value="San Luis Potosí"> San Luis Potosí </option>
+										    <option value="Sinaloa"> Sinaloa </option>
+										    <option value="Sonora"> Sonora </option>
+										    <option value="Tabasco"> Tabasco </option>
+										    <option value="Tamaulipas"> Tamaulipas </option>
+										    <option value="Tlaxcala"> Tlaxcala </option>
+										    <option value="Veracruz"> Veracruz </option>
+										    <option value="Yucatán"> Yucatán </option>
+										    <option value="Zacatecas"> Zacatecas </option>
+                    </select>
+						      </div>
+						    </div>
+						    <!-- 2DA PARTE DEL FORMULARIO -->
+                <hr style="border: 5px; border-color: black;">
+                
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="sel1">Seleccione tipo de adquisición:</label>
+                    <div class="col-sm-4">          
+                      <select class="form-control">
+                        <option value="0" hidden="true">Selecciona Una Opción</option>
+                          <option value="1"> 1 </option>
+                          <option value="2"> 2 </option>
+                      </select>
+                    </div>
+             
+                  <label class="control-label col-sm-2" for="nomco">Valor de la vivienda:</label>
+                    <div class="col-sm-4">
+                       <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+                    </div>
+						    </div>
+                
+                <div class="form- group">
+                
+                  <label class="control-label col-sm-2" for="sel1">Actividad económica:</label>
+                    <div class="col-sm-4">
+                      <select class="form-control">
+                        <option value="0" hidden="true">Seleccione Una Opción</option>
+                        <option value="Independiente"> Independiente </option>
+                        <option value="Formal"> Formal </option>
+                      </select>
+                    </div>
+                    
+                  <label class="control-label col-sm-2" for="sel1">Plazo de crédito:</label>
+                    <div class="col-sm-1">
+                       <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+                    </div>
+                    
+                  <label class="control-label col-sm-2" for="sel1">Tasa de interés:</label>
+                    <div class="col-sm-1">
+                       <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNumDec(event)">
+                    </div>
+                    
+                </div>
+                
+						    <!-- 3ERA PARTE DEL FORMULARIO-->
+						    <hr style="border: 5px; border-color: black;">
+                  <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Calcular</button>
+                    </div>
+                  </div>
+						</form>
+					</div>
+			</div>
+	</div>	
+</body>
+</html>
