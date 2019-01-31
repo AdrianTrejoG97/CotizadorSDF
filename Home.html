@@ -23,6 +23,10 @@
 			var key = keyt ? evt.which : evt.keyCode;
 			return (key <= 13 || (key>= 48 && key <= 57));
 		}
+		function aceptNumDec(evt){
+        var key = keyt ? evt.which : evt.keyCode;
+			return (key <= 13 || (key>= 48 && key <= 57)|| key ==46);
+		} 
 	</script>
 	<div class="panel-group">
 			<div class="panel panel-default col-sm-12 container-fluid" style="border-color: white; text-align: center;">
@@ -42,7 +46,7 @@
 							-moz-border-radius: 10px 10px 10px 10px;
 							-webkit-border-radius: 10px 10px 10px 10px;
 							padding: 1vw 1vw 1vw 1vw;">	
-						  	<form class="form-horizontal" action="/action_page.php">
+						  	<form class="form-horizontal" action="/action_page.php" style="padding-top: 1vw;">
 							  	<div class="form-group">
 							  	<label class="control-label col-sm-2" for="nomco">Nombre Completo:</label>
 							      <div class="col-sm-10">          
@@ -106,11 +110,52 @@
 							</form>
 						</div>
 						    <!-- 2DA PARTE DEL FORMULARIO -->
-								<form class="form-horizontal" action="/action_page.php"></form>
+						    <form class="form-horizontal" action="/action_page.php" style="padding-top: 2vw; padding-bottom: 1vw;">
+								<div class="form-group">
+					                  <label class="control-label col-sm-3" for="sel1">Seleccione tipo de adquisición:</label>
+					                    <div class="col-sm-3">          
+					                      <select class="form-control">
+					                        <option value="0" hidden="true">Selecciona Una Opción</option>
+					                          <option value="1"> 1 </option>
+					                          <option value="2"> 2 </option>
+					                      </select>
+					                    </div>
+					             
+					                  <label class="control-label col-sm-3" for="nomco">Valor de la vivienda:</label>
+					                    <div class="col-sm-3">
+					                       <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+					                    </div>
+								</div>
+					                
+					                <div class="form-group">
+					                  <label class="control-label col-sm-3">Actividad económica:</label>
+					                    <div class="col-sm-3">
+					                      <select class="form-control">
+					                        <option value="0" hidden="true">Seleccione Una Opción</option>
+					                        <option value="Independiente"> Independiente </option>
+					                        <option value="Formal"> Formal </option>
+					                      </select>
+					                    </div>
+					                </div>
+
+					                <div class="form-group">    
+					                  <label class="control-label col-sm-3" for="sel1">Plazo de crédito:</label>
+					                    <div class="col-sm-3">
+					                       <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNum(event)">
+					                    </div>
+					                    
+					                  <label class="control-label col-sm-3" for="sel1">Tasa de interés:</label>
+					                    <div class="col-sm-3">
+					                       <input type="text" class="form-control" id="tel" name="tel" onkeypress="return aceptNumDec(event)">
+					                    </div>
+					                </div>    
+							</form>
+
+								
 
 						    <!-- 3ERA PARTE DEL FORMULARIO-->
 						    <hr style="border: solid 1px #BFBFBF;">
-						    <form class="form-horizontal" action="/action_page.php">
+						    <form class="form-horizontal" action="/action_page.php" style="padding-top: 1vw; padding-bottom: 1vw;">
 						    <div class="form-group">
 							    <label class="control-label col-sm-offset-2 col-sm-2" for="sel1" style="font-size:1.5vw;">Recursos</label>
 								<label class="control-label col-sm-offset-2 col-sm-5 " for="sel1" style="font-size:1.5vw;">Gastos de Originaci&oacuten</label>
